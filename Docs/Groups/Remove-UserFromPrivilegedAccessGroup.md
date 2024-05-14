@@ -8,7 +8,7 @@ Remove a user from a Privileged Access Group.
 
 Remove a user from a Privileged Access Group(s) in Entra ID.
 
-## Parameters
+## PARAMETERS
 
 ### `UserId`
 
@@ -22,7 +22,7 @@ The ID of the group in Entra ID. If not provided, all groups that are assignable
 
 The role type to remove the user from.
 
-### EXAMPLES
+## EXAMPLES
 
 ### EXAMPLE 01
 
