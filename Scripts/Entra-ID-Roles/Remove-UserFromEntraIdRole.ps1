@@ -88,8 +88,9 @@ if ($null -eq $mgContext) {
 # for the Microsoft Graph API.
 $requiredGraphScopes = @(
     "User.Read.All",
-    "Group.Read.All",
-    "PrivilegedAccess.ReadWrite.AzureADGroup"
+    "RoleManagement.Read.Directory",
+    "RoleAssignmentSchedule.ReadWrite.Directory",
+    "RoleEligibilitySchedule.ReadWrite.Directory"
 )
 
 $missingScopes = $requiredGraphScopes | Where-Object { $PSItem -notin $mgContext.Scopes }
