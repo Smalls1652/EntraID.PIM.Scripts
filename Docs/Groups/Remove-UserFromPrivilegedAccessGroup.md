@@ -47,3 +47,12 @@ Remove the user's "owner" role from the group with the ID "00000000-0000-0000-00
 ```powershell
 Remove-UserFromPrivilegedAccessGroup.ps1 -UserId "jwinger@greendalecc.edu" -GroupId "00000000-0000-0000-0000-000000000000" -RoleType "owner"
 ```
+
+## REQUIRED MODULES
+
+| Module Name | Version |
+| --- | --- |
+| `Microsoft.Graph.Authentication` | `2.17.0 <=` |
+| `Microsoft.Graph.Groups` | `2.17.0 <=` |
+| `Microsoft.Graph.Users` | `2.17.0 <=` |
+| `Microsoft.Graph.Beta.Identity.Governance` | `2.17.0 <=` |
