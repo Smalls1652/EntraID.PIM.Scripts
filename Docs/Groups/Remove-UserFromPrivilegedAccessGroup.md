@@ -26,24 +26,24 @@ The role type to remove the user from.
 
 ### EXAMPLE 01
 
+Remove the user's "member" role from the group with the ID "00000000-0000-0000-0000-000000000000".
+
 ```powershell
 Remove-UserFromPrivilegedAccessGroup.ps1 -UserId "jwinger@greendalecc.edu" -GroupId "00000000-0000-0000-0000-000000000000"
-
-Removes the user's "member" role from the group with the ID "00000000-0000-0000-0000-000000000000".
 ```
 
 ### EXAMPLE 02
 
+Remove the user's "member" role from any group that is assignable to a role.
+
 ```powershell
 Remove-UserFromPrivilegedAccessGroup.ps1 -UserId "jwinger@greendalecc.edu"
-
-Removes the user's "member" role from any group that is assignable to a role.
 ```
 
 ### EXAMPLE 03
 
+Remove the user's "owner" role from the group with the ID "00000000-0000-0000-0000-000000000000".
+
 ```powershell
 Remove-UserFromPrivilegedAccessGroup.ps1 -UserId "jwinger@greendalecc.edu" -GroupId "00000000-0000-0000-0000-000000000000" -RoleType "owner"
-
-Removes the user's "owner" role from the group with the ID "00000000-0000-0000-0000-000000000000".
 ```
