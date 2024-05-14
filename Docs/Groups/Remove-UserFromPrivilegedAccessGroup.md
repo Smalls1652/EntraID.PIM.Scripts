@@ -52,7 +52,7 @@ Remove-UserFromPrivilegedAccessGroup.ps1 -UserId "jwinger@greendalecc.edu" -Grou
 
 | Module Name | Version |
 | --- | --- |
-| `Microsoft.Graph.Authentication` | `2.17.0 <=` |
-| `Microsoft.Graph.Groups` | `2.17.0 <=` |
-| `Microsoft.Graph.Users` | `2.17.0 <=` |
-| `Microsoft.Graph.Beta.Identity.Governance` | `2.17.0 <=` |
+| [`Microsoft.Graph.Authentication`](https://www.powershellgallery.com/packages/Microsoft.Graph.Authentication) | `2.17.0 <=` |
+| [`Microsoft.Graph.Groups`](https://www.powershellgallery.com/packages/Microsoft.Graph.Groups) | `2.17.0 <=` |
+| [`Microsoft.Graph.Users`](https://www.powershellgallery.com/packages/Microsoft.Graph.Users) | `2.17.0 <=` |
+| [`Microsoft.Graph.Beta.Identity.Governance`](https://www.powershellgallery.com/packages/Microsoft.Graph.Beta.Identity.Governance) | `2.17.0 <=` |
