@@ -57,7 +57,7 @@ param(
     [ValidateNotNullOrEmpty()]
     [string]$UserId,
     [Parameter(Position = 1)]
-    [string]$RoleName
+    [string[]]$RoleName
 )
 
 class DirectoryRoleAssignments {
@@ -131,8 +131,17 @@ if ($null -eq $RoleName -or [string]::IsNullOrEmpty($RoleName)) {
     $directoryRoles = Get-MgBetaRoleManagementDirectoryRoleDefinition -All | Sort-Object -Property "DisplayName"
 }
 else {
-    Write-Verbose "Fetching directory role '$($RoleName)'."
-    $directoryRoles = Get-MgBetaRoleManagementDirectoryRoleDefinition -Filter "displayName eq '$($RoleName)'"
+    $directoryRoles = foreach ($roleNameItem in $RoleName) {
+        Write-Verbose "Fetching directory role '$($roleNameItem)'."
+        $fetchedDirectoryRole = Get-MgBetaRoleManagementDirectoryRoleDefinition -Filter "displayName eq '$($roleNameItem)'"
+
+        if ($null -eq $fetchedDirectoryRole) {
+            Write-Warning "Directory role '$($roleNameItem)' not found."
+            continue
+        }
+
+        $fetchedDirectoryRole
+    }
 }
 
 if ($null -eq $directoryRoles) {
