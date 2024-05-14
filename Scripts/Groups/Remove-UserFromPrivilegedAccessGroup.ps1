@@ -63,7 +63,7 @@ param(
     [ValidateNotNullOrEmpty()]
     [string]$UserId,
     [Parameter(Position = 1)]
-    [string]$GroupId,
+    [string[]]$GroupId,
     [Parameter(Position = 2)]
     [ValidateSet("member", "owner")]
     [string]$RoleType = "member"
@@ -144,8 +144,18 @@ try {
     else {
         # Fetch the group with the provided 'GroupId'.
 
-        Write-Verbose "Fetching group '$($GroupId)'."
-        $groups = Get-MgGroup -GroupId $GroupId -ErrorAction "Stop"
+        $groups = foreach ($groupIdItem in $GroupId) {
+            Write-Verbose "Fetching group '$($groupIdItem)'."
+
+            $fetchedGroup = Get-MgGroup -GroupId $groupIdItem -ErrorAction "SilentlyContinue"
+
+            if ($null -eq $fetchedGroup) {
+                Write-Warning "Group with the ID '$($groupIdItem)' not found."
+                continue
+            }
+
+            $fetchedGroup
+        }
     }
 }
 catch [System.Exception] {
