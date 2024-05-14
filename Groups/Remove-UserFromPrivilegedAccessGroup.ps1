@@ -1,6 +1,6 @@
 <#PSScriptInfo
 
-.VERSION 0.1.0
+.VERSION 1.0.0
 
 .GUID d8eb6328-a330-4b35-8185-c8f42faf4f4b
 
@@ -8,7 +8,7 @@
 
 .COMPANYNAME Smalls.Online
 
-.COPYRIGHT 2024 - Smalls.Online
+.COPYRIGHT 2024
 
 .TAGS entraid pim privileged-identity-management privileged-access-groups
 
