@@ -1,14 +1,10 @@
 # `Remove-UserFromEntraIdRole.ps1`
 
-## SYNOPSIS
-
-Remove a user's assignment to an Entra ID role.
-
-## DESCRIPTION
+## Description
 
 Remove a user's active or eligible assignment to an Entra ID role.
 
-## PARAMETERS
+## Parameters
 
 ### `UserId`
 
@@ -18,27 +14,27 @@ The ID of the user in Entra ID.
 
 The name of the directory role. If not provided, it will default to all directory roles.
 
-## EXAMPLES
+## Examples
 
-### EXAMPLE 01
+### Example 1
 
 Removes the user's assignment from the "User Administrator" directory role.
 
 ```powershell
-Remove-UserFromEntraIdRole.ps1 -UserId "jwinger@greendalecc.edu" -GroupId "User Administrator"
+PS > Remove-UserFromEntraIdRole.ps1 -UserId "jwinger@greendalecc.edu" -GroupId "User Administrator"
 ```
 
-### EXAMPLE 02
+### Example 2
 
 Removes the user's assignment from any directory role.
 
 ```powershell
-Remove-UserFromEntraIdRole.ps1 -UserId "jwinger@greendalecc.edu"
+PS > Remove-UserFromEntraIdRole.ps1 -UserId "jwinger@greendalecc.edu"
 ```
 
-## REQUIRED MODULES
+## Required Modules
 
-| Module Name | Version |
+| Module Name | Module Version |
 | --- | --- |
 | [`Microsoft.Graph.Authentication`](https://www.powershellgallery.com/packages/Microsoft.Graph.Authentication) | `2.17.0 <=` |
 | [`Microsoft.Graph.Groups`](https://www.powershellgallery.com/packages/Microsoft.Graph.Groups) | `2.17.0 <=` |

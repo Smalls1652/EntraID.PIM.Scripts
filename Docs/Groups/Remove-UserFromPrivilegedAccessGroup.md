@@ -1,14 +1,10 @@
 # `Remove-UserFromPrivilegedAccessGroup.ps1`
 
-## SYNOPSIS
-
-Remove a user from a Privileged Access Group.
-
-## DESCRIPTION
+## Description
 
 Remove a user from a Privileged Access Group(s) in Entra ID.
 
-## PARAMETERS
+## Parameters
 
 ### `UserId`
 
@@ -22,35 +18,35 @@ The ID of the group in Entra ID. If not provided, all groups that are assignable
 
 The role type to remove the user from.
 
-## EXAMPLES
+## Examples
 
-### EXAMPLE 01
+### Example 1
 
-Remove the user's "member" role from the group with the ID "00000000-0000-0000-0000-000000000000".
-
-```powershell
-Remove-UserFromPrivilegedAccessGroup.ps1 -UserId "jwinger@greendalecc.edu" -GroupId "00000000-0000-0000-0000-000000000000"
-```
-
-### EXAMPLE 02
-
-Remove the user's "member" role from any group that is assignable to a role.
+Removes the user's "member" role from the group with the ID "00000000-0000-0000-0000-000000000000".
 
 ```powershell
-Remove-UserFromPrivilegedAccessGroup.ps1 -UserId "jwinger@greendalecc.edu"
+PS > Remove-UserFromPrivilegedAccessGroup.ps1 -UserId "jwinger@greendalecc.edu" -GroupId "00000000-0000-0000-0000-000000000000"
 ```
 
-### EXAMPLE 03
+### Example 2
 
-Remove the user's "owner" role from the group with the ID "00000000-0000-0000-0000-000000000000".
+Removes the user's "member" role from any group that is assignable to a role.
 
 ```powershell
-Remove-UserFromPrivilegedAccessGroup.ps1 -UserId "jwinger@greendalecc.edu" -GroupId "00000000-0000-0000-0000-000000000000" -RoleType "owner"
+PS > Remove-UserFromPrivilegedAccessGroup.ps1 -UserId "jwinger@greendalecc.edu"
 ```
 
-## REQUIRED MODULES
+### Example 3
 
-| Module Name | Version |
+Removes the user's "owner" role from the group with the ID "00000000-0000-0000-0000-000000000000".
+
+```powershell
+PS > Remove-UserFromPrivilegedAccessGroup.ps1 -UserId "jwinger@greendalecc.edu" -GroupId "00000000-0000-0000-0000-000000000000" -RoleType "owner"
+```
+
+## Required Modules
+
+| Module Name | Module Version |
 | --- | --- |
 | [`Microsoft.Graph.Authentication`](https://www.powershellgallery.com/packages/Microsoft.Graph.Authentication) | `2.17.0 <=` |
 | [`Microsoft.Graph.Groups`](https://www.powershellgallery.com/packages/Microsoft.Graph.Groups) | `2.17.0 <=` |
