@@ -12,7 +12,7 @@
 
 .TAGS entraid pim privileged-identity-management entraid-role
 
-.LICENSEURI https://raw.githubusercontent.com/Smalls1652/EntraID.PIM.Scripts/main/README.md
+.LICENSEURI https://github.com/Smalls1652/EntraID.PIM.Scripts/blob/main/LICENSE
 
 .PROJECTURI https://github.com/Smalls1652/EntraID.PIM.Scripts
 
