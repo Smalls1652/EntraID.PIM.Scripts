@@ -44,7 +44,20 @@ foreach ($scriptFileItem in $scriptFiles) {
 
     $scriptDocsFilePath = Join-Path -Path $scriptDocsDirectoryPath -ChildPath "$($scriptFileItem.BaseName).md"
 
+    Write-Warning "$($scriptFileItem.FullName)"
+
     $scriptFileInfo = Get-PSScriptFileInfo -Path $scriptFileItem.FullName
+
+    # If the script has required modules, we need to import them before running 'Get-Help'.
+    # Sometimes PowerShell doesn't load the required modules automatically and it will cause
+    # 'Get-Help' to attempt to search for the help data online.
+    foreach ($moduleItem in $scriptFileInfo.ScriptRequiresComment.RequiredModules) {
+        if ($null -eq (Get-Module -Name $moduleItem.Name)) {
+            Write-Warning "Importing module '$($moduleItem.Name)'."
+            $null = Import-Module -Name $moduleItem.Name -Verbose:$false
+        }
+    }
+
     $commandInfo = Get-Command -Name $scriptFileItem.FullName
     $helpData = Get-Help -Name $scriptFileItem.FullName -Full
 
