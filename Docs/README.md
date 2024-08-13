@@ -58,4 +58,5 @@ Scripts related to Privileged Access Groups.
 
 | Name | Description |
 | --- | --- |
+| [`Add-UserToPrivilegedAccessGroup.ps1`](./Groups/Add-UserToPrivilegedAccessGroup.md) | Add a user to a Privileged Access Group. |
 | [`Remove-UserFromPrivilegedAccessGroup.ps1`](./Groups/Remove-UserFromPrivilegedAccessGroup.md) | Remove a user from a Privileged Access Group. |
