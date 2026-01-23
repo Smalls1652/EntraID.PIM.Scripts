@@ -182,7 +182,7 @@ try {
         }
 
         Default {
-            $group = Get-MgGroup -GroupId $groupIdItem -ErrorAction "Stop"
+            $group = Get-MgGroup -GroupId $GroupId -ErrorAction "Stop"
             break
         }
     }
