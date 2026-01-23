@@ -12,9 +12,9 @@
 
 .TAGS entraid pim privileged-identity-management privileged-access-groups
 
-.LICENSEURI https://raw.githubusercontent.com/Smalls1652/EntraID.PIM.Scripts/main/LICENSE
+.LICENSEURI https://git.smalls.online/smalls/EntraID.PIM.Scripts/raw/branch/main/LICENSE
 
-.PROJECTURI https://github.com/Smalls1652/EntraID.PIM.Scripts
+.PROJECTURI https://git.smalls.online/smalls/EntraID.PIM.Scripts
 
 .ICONURI 
 
@@ -71,11 +71,11 @@
 
     Assigns the user as active to the group as an owner that starts on September 17th, 2009, at 8:00 AM and expires on May 9th, 2013, at 5:00 PM with the justification "Jeff is the leader of the group."
 .LINK
-    https://github.com/Smalls1652/EntraID.PIM.Scripts
+    https://git.smalls.online/smalls/EntraID.PIM.Scripts
 .LINK
-    https://github.com/Smalls1652/EntraID.PIM.Scripts/blob/main/Scripts/Groups/Add-UserToPrivilegedAccessGroup.ps1
+    https://git.smalls.online/smalls/EntraID.PIM.Scripts/blob/main/Scripts/Groups/Add-UserToPrivilegedAccessGroup.ps1
 .LINK
-    https://github.com/Smalls1652/EntraID.PIM.Scripts/blob/main/Docs/Groups/Add-UserToPrivilegedAccessGroup.md
+    https://git.smalls.online/smalls/EntraID.PIM.Scripts/blob/main/Docs/Groups/Add-UserToPrivilegedAccessGroup.md
 #>
 [CmdletBinding(SupportsShouldProcess, DefaultParameterSetName = "GroupId")]
 param(
